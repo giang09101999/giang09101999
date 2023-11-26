@@ -1,4 +1,4 @@
-#Delete a character from a string
+#Upper and lower string
 string = input("Input string: ")
 print("The original string: ", string)
 
