@@ -1,6 +1,6 @@
 string = input("Input elements: ")
 
-List = string.split()
+List = list(map(str, string.split()))
 
 index = int(input("Input index you want to add: "))
 content = input("Input string: ")
