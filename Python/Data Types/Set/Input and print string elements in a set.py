@@ -1,6 +1,5 @@
 elements = input("Input elements: ")
 
-List = list(map(str, elements.split()))
-Set = set(List)
+Set = set(map(str, elements.split()))
 
 print("The string set: ", Set)
