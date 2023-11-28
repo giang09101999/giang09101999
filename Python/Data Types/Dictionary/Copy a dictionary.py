@@ -1,3 +1,4 @@
+import sys
 Dictionary = {}
 
 print("1. Key: String; Value: String")
@@ -6,6 +7,10 @@ print("3. Key: String; Value: Integer")
 print("4. Key: Integer; Value: String")
 
 Mode = int(input("Input mode: "))
+if ((Mode < 1) | (Mode > 4)):
+    print("Input Error!!")
+    sys.exit()
+    
 n = int(input("Input number of elements in a dictionary: "))
 
 if Mode == 1:
