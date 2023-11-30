@@ -7,6 +7,5 @@ List = list(map(int, Elements.split()))
 Array = np.array(List)
 print("The original array: ", Array)
 
-List.sort(reverse= True)
-Array = np.array(List)
+Array[::-1].sort()
 print("The descending array: ", Array)
