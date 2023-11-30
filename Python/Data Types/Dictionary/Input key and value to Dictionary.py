@@ -40,16 +40,16 @@ try:
             key = int(input("Input key: "))
             value = input("Input value: ")
             Dictionary[key] = value
-        
+    print("The dictionary:", Dictionary)   
+    
 except:
     print("There are some errors: ")
-    print("1. Input wrong datatype key")
-    print("2. Input wrong datatype  value")
+    print("1. Input wrong datatype of key")
+    print("2. Input wrong datatype of value")
     print("3. Input wrong datatype of mode")
     print("4. Input wrong mode")
 
 else:
-    print("The dictionary:", Dictionary)
     print("Run successfully!!")
     
 
