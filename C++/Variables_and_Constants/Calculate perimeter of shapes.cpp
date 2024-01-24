@@ -14,12 +14,12 @@ int main()
     std::cout << "Enter edge: ";
     std::cin >> edge;
 
-    float rectangle_area = length*width;
-    float square_area = edge*edge;
-    float circle_area = pi*radius*radius;
+    float rectangle_perimeter = 2*(length + width);
+    float square_perimeter = 4*edge;
+    float circle_perimeter = 2*pi*radius;
 
     std::cout << "----------------------------------------" << std::endl;
-    std::cout << "The area of rectangle is: " << rectangle_area << std::endl;
-    std::cout << "The area of square is: " << square_area << std::endl;
-    std::cout << "The area of circle is: " << circle_area << std::endl;
+    std::cout << "The perimeter of rectangle is: " << rectangle_perimeter << std::endl;
+    std::cout << "The perimeter of square is: " << square_perimeter << std::endl;
+    std::cout << "The perimeter of circle is: " << circle_perimeter << std::endl;
 }
