@@ -8,6 +8,7 @@ int main()
     short d = 10;
     char e = 'Giang';
 
+
     std::cout << "Size of datatype a is: " << sizeof(a) << std::endl;
     std::cout << "Size of datatype b is: " << sizeof(b) << std::endl;
     std::cout << "Size of datatype c is: " << sizeof(c) << std::endl;
