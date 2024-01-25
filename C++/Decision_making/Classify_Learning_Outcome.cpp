@@ -1,85 +1,21 @@
 #include<iostream>
 
-void excellent(float score, float Math, float Physics, float Chemistry)
-{
-    if(((Math < 6.5)&(Math >= 5))|((Physics < 6.5)&(Physics >= 5))|((Chemistry < 6.5)&(Chemistry >= 5)))
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Credit" << std::endl;
-        exit(0);
-    }
-    
-    else if (((Math < 5)&(Math >= 3))|((Physics < 5)&(Physics >= 3))|((Chemistry < 5)&(Chemistry >= 3)))
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Average" << std::endl;
-        exit(0);
-    }
-    else
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Excellent" << std::endl;   
-        exit(0);    
-    }
-}
-
-void credit(float score, float Math, float Physics, float Chemistry)
-{
-    if(((Math < 5)&(Math >= 3))|((Physics < 5)&(Physics >= 3))|((Chemistry < 5)&(Chemistry >= 3)))
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Average" << std::endl;
-        exit(0);
-    }
-    else if((Math < 3)|(Physics < 3)|(Chemistry < 3))
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Bad" << std::endl;
-        exit(0);
-    }
-    else
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Credit" << std::endl;
-        exit(0);
-    }    
-}
-
-void average(float score, float Math, float Physics, float Chemistry)
-{
-    if((Math < 3)|(Physics < 3)|(Chemistry < 3))
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Bad" << std::endl;
-        exit(0);
-    }
-    else
-    {
-        std::cout << "Your score is: " << score << std::endl;
-        std::cout << "Average" << std::endl;
-        exit(0);        
-    }
-}
-
-void bad(float score, float Math, float Physics, float Chemistry)
-{
-    std::cout << "Your score is: " << score << std::endl;
-    std::cout << "Bad" << std::endl;
-    exit(0);      
-}
 int main()
 {
     float math, physics, chemistry, average_score;
-    std::cout << "Input math score: " << std::endl;
+
+    std::cout << "Enter math score: ";
     std::cin >> math;    
-    std::cout << "Input physics score: " << std::endl;
+    
+    std::cout << "Enter physics score: ";
     std::cin >> physics;    
-    std::cout << "Input chemistry score: " << std::endl;
+    
+    std::cout << "Enter chemistry score: ";
     std::cin >> chemistry;
 
     average_score = (math + physics + chemistry)/3;
 
-    if((math < 0)|(math > 10)|(physics < 0)|(physics > 10)|(chemistry < 0)|(chemistry > 10))
+    if ((math < 0)|(math > 10)|(physics < 0)|(physics > 10)|(chemistry < 0)|(chemistry > 10))
     {
         std::cout << "Input error!!" << std::endl;
         exit(0);
@@ -87,18 +23,60 @@ int main()
 
     if(average_score >= 8)
     {
-        excellent(average_score, math, physics, chemistry);
+        if (((math < 6.5)&(math >= 5))|((physics < 6.5)&(physics >= 6.5))|((chemistry < 6.5)&(chemistry >= 5)))
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Credit" << std::endl;
+        }
+        else if (((math < 5)&(math >= 3))|((physics < 5)&(physics >= 3))|((chemistry < 5)&(chemistry >= 3)))
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Average" << std::endl;
+        }        
+        else
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Excellent" << std::endl;            
+        }
     }
-    else if ((average_score >= 6.5)&(average_score < 8))
+
+    else if((average_score < 8)&(average_score >= 6.5))
     {
-        credit(average_score, math, physics, chemistry);
+        if(((math < 5)&(math >= 3))|((physics < 5)&(physics >= 3))|((chemistry < 5)&(chemistry >=3)))
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Average" << std::endl; 
+        }
+        else if((math < 3)|(physics < 3)|(chemistry < 3))
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Bad" << std::endl;            
+        }
+        else
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Credit" << std::endl;            
+        }
     }
-    else if((average_score >= 5)&(average_score < 6.5))
+
+    else if ((average_score >= 5)&(average_score < 6.5))
     {
-        average(average_score, math, physics, chemistry);
+        if((math < 3)|(physics < 3)|(chemistry < 3))
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Bad" << std::endl;            
+        }
+        else
+        {
+            std::cout << "Your score is: " << average_score << std::endl;
+            std::cout << "Average" << std::endl;            
+        }
     }
     else
     {
-        bad(average_score, math, physics, chemistry);
+        std::cout << "Your score is: " << average_score << std::endl;
+        std::cout << "Bad" << std::endl;            
     }
+
+
 }
