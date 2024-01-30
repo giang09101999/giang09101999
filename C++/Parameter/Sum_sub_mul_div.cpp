@@ -37,4 +37,6 @@ int main()
     Substraction(a, b, sub);
     Multiply(a, b, mul);
     Division(a, b, div);
+	
+	std::cout << "a: " << a << "; b = " << b << std::endl;
 }
