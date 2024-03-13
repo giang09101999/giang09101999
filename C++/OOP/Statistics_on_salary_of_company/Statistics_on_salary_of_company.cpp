@@ -3,7 +3,7 @@
 using namespace std;
 class Salary
 {
-
+private:
     double employee_number, manager_number, director_number;
     double employee_salary, manager_salary, director_salary;
     double revenue, cost;
