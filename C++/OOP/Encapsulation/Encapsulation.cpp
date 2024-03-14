@@ -1,6 +1,6 @@
 #include<iostream>
-
 using namespace std;
+
 class Calculate
 {
 int a, b;
@@ -16,12 +16,3 @@ public:
     }
 
 };
-
-int main()
-{
-    int n;
-    cout << "Enter n: ";
-    cin >> n;
-    Calculate calculate(n);
-    calculate.display();
-}
