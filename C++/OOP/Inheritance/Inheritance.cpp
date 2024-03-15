@@ -3,44 +3,22 @@ using namespace std;
 
 class Car
 {
+private:
+    int a;
 public:
     int speed;
-};
-
-class Ferrari: public Car
-{
-public:
-    Ferrari()
+    void input()
     {
-        cout << "Enter speed of Ferrari car: ";
-        cin >> speed;
+        cout << "Enter value of a: ";
+        cin >> a;
     }
     void print()
     {
-        cout << "The speed of Ferrari car is: " << speed << endl;
+        speed = a + 5;
+        cout << "The speed of Car: " << speed << endl;
     }
 };
 
-class Mescedes: public Car
-{
-public:
-    Mescedes()
-    {
-        cout << "Enter speed of Mescedes car: ";
-        cin >> speed;
-    }
-    void print()
-    {
-        cout << "The speed of Mescedes car is: " << speed << endl;
-    }
-};
 
-int main()
-{
-    Ferrari ferrari;
-    Mescedes mescedes;
-    cout << "===================================" << endl;
-    ferrari.print();
-    mescedes.print();
 
-}
+
