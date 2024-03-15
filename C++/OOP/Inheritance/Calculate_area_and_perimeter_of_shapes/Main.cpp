@@ -22,7 +22,7 @@ public:
         cout << "The perimeter of shapes:" << endl;
         rectangle_perimeter = (length + width)*2;
         square_perimeter = edge*4;
-        circle_perimeter = 3.14*radius;
+        circle_perimeter = 2*3.14*radius;
         cout << "The perimeter of rectangle is: " << rectangle_perimeter << endl;
         cout << "The perimeter of square is: " << square_perimeter << endl;
         cout << "The perimeter of cirlce is: " << circle_perimeter << endl;

@@ -20,7 +20,7 @@ public:
     {
        rectangle_area = length*width;
        square_area = edge*edge;
-       circle_area = 3.14*radius;
+       circle_area = 3.14*radius*radius;
        cout << "===========================================" << endl;
        cout << "The area of shapes:" << endl;
        cout << "The area of rectangle is: " << rectangle_area << endl;
