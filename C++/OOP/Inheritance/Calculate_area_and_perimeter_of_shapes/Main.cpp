@@ -5,7 +5,17 @@ class Shape_perimeter : public Shape_area
 {
 public:
     float rectangle_perimeter, square_perimeter, circle_perimeter;
-
+    void input()
+    {
+        cout << "Input length: ";
+        cin >> length;
+        cout << "Input width: ";
+        cin >> width;
+        cout << "Input radius: ";
+        cin >> radius;  
+        cout << "Input edge: ";
+        cin >> edge;                
+    }
     void output()
     {
         cout << "===================================" << endl;
@@ -25,7 +35,8 @@ int main()
     Shape_area shape_area;
     Shape_perimeter shape_perimeter;
     shape_area.input();
-    shape_area.output();
+    
+    shape_area.output();  
     shape_perimeter.input();
     shape_perimeter.output();
 }
